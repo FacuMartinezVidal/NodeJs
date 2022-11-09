@@ -1,0 +1,17 @@
+.th {
+  border: 1px solid black;
+}
+.td {
+  border: 1px solid black;
+}
+.img {
+  width: 100px;
+  height: 100px;
+}
+.table {
+  margin-top: 100px;
+}
+
+.h2 {
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+{{> navbar}}
+<table class="table">
+  </thead>
+  <tbody>
+    {{#if productsExist}}
+        <thead>
+            <tr>
+                <th class="table-primary" scope="col">#</th>
+                <th class="table-primary" scope="col">Nombre</th>
+                <th class="table-primary" scope="col">Precio</th>
+                <th class="table-primary" scope="col">Foto</th>
+            </tr>
+    {{#each productos}}
+        <tr>
+            <th>{{this.id}}</th>
+            <td>{{this.title}}</td>
+            <td>{{this.price}}</td>
+            <td><img src="{{this.url}}" class="product-img"/></td>
+        </tr>
+    {{/each}}
+    {{else}}
+        <h2>No hay productos disponibles</h2>
+    {{/if}}
+  </tbody>
+</table>

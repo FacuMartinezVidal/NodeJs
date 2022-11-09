@@ -1,0 +1,35 @@
+{
+  "name": "progamacion-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "desafio05.js",
+  "scripts": {
+    "start": "node desafio04.js",
+    "build:css": "postcss public/styles/tailwind.css -o public/styles/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FacuMartinezVidal/Progamacion-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FacuMartinezVidal/Progamacion-Backend/issues"
+  },
+  "homepage": "https://github.com/FacuMartinezVidal/Progamacion-Backend#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prettier": "2.7.1",
+    "tailwindcss": "^3.2.2"
+  }
+}
