@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const { Router } = express;
-const routerProductos = Router();
 const Contenedor = require('./desafio02');
 const contenedor = new Contenedor();
 app.use(express.json());

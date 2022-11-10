@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <%- include('../partials/navbar'); %>
+  <%=title %>
+
+  <form method="POST" action="/products">
+    Nombre: <input id="title" name="title" /> <br />
+    price: <input id="price" name="price" /> <br />
+    img url: <input id="thumbnail" name="thumbnail" /> <br /><br />
+    <input type="submit" value="ENVIAR!" /> <br />
+  </form>
+  <%- include('../partials/footer'); %>
+</body>
+
+</html>

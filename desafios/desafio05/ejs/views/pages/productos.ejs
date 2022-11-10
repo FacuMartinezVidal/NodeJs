@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <%- include('../partials/navbar'); %>
+  <%=title %>
+
+  <% if(products?.length > 0){ %>
+
+  <% products.forEach((item)=>{ %>
+  <p>
+    id: <%=item.id%><br />
+    titulo: <%=item.title%><br />
+    price: <%=item.price%><br />
+    <img class="product-img" src="<%=item.thumbnail %>" /><br />
+  </p>
+  <% }) %>
+  <% } else { %>
+  No hay productos cargados hasta el momento
+  <% } %>
+
+  <%- include('../partials/footer'); %>
+</body>
+
+</html>

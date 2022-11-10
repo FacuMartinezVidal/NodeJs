@@ -1,6 +1,5 @@
 {{> navbar}}
 <table class="table">
-  </thead>
   <tbody>
     {{#if productsExist}}
         <thead>
@@ -10,6 +9,7 @@
                 <th class="table-primary" scope="col">Precio</th>
                 <th class="table-primary" scope="col">Foto</th>
             </tr>
+        </thead>
     {{#each productos}}
         <tr>
             <th>{{this.id}}</th>
