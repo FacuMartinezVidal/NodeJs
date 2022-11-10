@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const { engine } = require('express-handlebars');
-const port = process.env.PORT || 8080;
+const port = 8080;
 const Contenedor = require('./desafio02');
 const contenedor = new Contenedor();
 const server = app.listen(port, () => {

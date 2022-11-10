@@ -2,9 +2,9 @@
   "name": "progamacion-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "desafio05.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node desafio04.js",
+    "start": "nodemon server.js",
     "build:css": "postcss public/styles/tailwind.css -o public/styles/styles.css"
   },
   "repository": {
