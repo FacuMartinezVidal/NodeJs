@@ -7,23 +7,31 @@
 
 <body>
   <%- include('../partials/navbar'); %>
-  <%=title %>
+  <table class="table">
+    <tbody>
+      <% if(productos?.length > 0){ %>
+            <thead>
+              <tr>
+                <th class="table-primary" scope="col">#</th>
+                <th class="table-primary" scope="col">Nombre</th>
+                <th class="table-primary" scope="col">Precio</th>
+                <th class="table-primary" scope="col">Foto</th>
+              </tr>
+            </thead>
+      <% productos.forEach((item)=>{ %>
+            <tr>
+              <th><%=item.id%></th>
+              <th><%=item.title%></th>
+              <th><%=item.price%></th>
+              <th><img class="product-img" src="<%=item.url %>" /></th>
+            </tr>
+      <% }) %>
+      <% } else { %>
+      No hay productos cargados hasta el momento
+      <% } %>
 
-  <% if(products?.length > 0){ %>
-
-  <% products.forEach((item)=>{ %>
-  <p>
-    id: <%=item.id%><br />
-    titulo: <%=item.title%><br />
-    price: <%=item.price%><br />
-    <img class="product-img" src="<%=item.thumbnail %>" /><br />
-  </p>
-  <% }) %>
-  <% } else { %>
-  No hay productos cargados hasta el momento
-  <% } %>
-
-  <%- include('../partials/footer'); %>
+    </tbody>
+  </table>
 </body>
 
 </html>

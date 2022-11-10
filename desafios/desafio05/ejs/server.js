@@ -12,16 +12,32 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.set('view engine', 'ejs');
-
-app.get('/productos', (req, res) => {
+app.get('/', async (req, res) => {
   console.log('aqui products');
-  res.render('pages/products', { title: 'listado de productos', products: productsHC });
+  res.render('pages/index')
+});
+
+app.get('/productos', async (req, res) => {
+  console.log('aqui products');
+  const productos = await contenedor.getAll()
+  res.render('pages/productos', {productos:productos});
+});
+app.get('/productos', async (req, res) => {
+  console.log('aqui products');
+  const productos = await contenedor.getAll()
+  res.render('pages/productos', {productos:productos});
 });
 
 app.post('/formulario', (req, res) => {
-
+  const { body } = req;
+  try {
+    contenedor.save(body);
+    res.render('pages/gracias.ejs');
+  } catch {
+    res.json({ error: true, msj: 'error al postear ' });
+  }
 });
 
 app.get('/formulario', (req, res) => {
-  res.render('pages/form', { title: 'ingrese un producto nuevo' });
+  res.render('pages/formulario', { title: 'ingrese un producto nuevo' });
 });
