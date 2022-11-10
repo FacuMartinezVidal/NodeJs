@@ -1,0 +1,1 @@
+De los tres motores, luego de haber utilizado cada uno de ellos para este desafio, eligo a "pug" ya que para mi la sintaxis es muy sencilla, muy agradable a la vista y facil de aprender.
