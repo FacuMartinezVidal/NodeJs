@@ -453,3 +453,69 @@
 
 //Socket.IO --> libreria para hacer sockets y sockets de tiempo real
 //Soporte de reconexion automatica --> a menos que se le indique lo contrario, un cliente desconectado intentara siempre volver a conectarse, hasta que el servidor vuelva a estar disponible (ej. llamada de celular)
+{
+  /* <form onsubmit="return false">
+        <label for="msg">Mensaje</label><br>
+        <input type="text" id="msg"><br>
+        <button type="submit" id="enviar">Enviar</button>
+</form> */
+}
+
+//FRONT END
+// const socket = io();
+// let nombre = prompt('Como es tu nombre')
+// socket.on("connect", () => {
+// 	console.log(`${socket.id} entro a la sala de chat`);
+// });
+
+// socket.emit("msg",  nombre);
+
+// socket.on("chat", (data) => {
+// 	let msgChat = "";
+// 	data.forEach(({nombre, msg}) => {
+//         msgChat += `${nombre} : ${msg}` + "<br>"
+//     });
+//     document.querySelector("#chat").innerHTML = msgChat;
+// })
+
+// let enviar = document.querySelector("#enviar");
+
+// enviar.addEventListener("click", () => {
+// 	let msg = document.querySelector("#msg").value;
+// 	socket.emit("msgChat", { nombre, msg });
+// });
+
+//BACKEND
+// const express = require("express");
+// const app = express();
+// const port = process.env.PORT || 8080;
+
+// //IMPLEMENTACION
+// const httpServer = require("http").createServer(app);
+// const io = require("socket.io")(httpServer);
+
+// httpServer.listen(port, () => console.log("SERVER ON"));
+
+// app.use(express.json());
+// app.use(express.static(__dirname + "/public"));
+// app.use(express.urlencoded({ extended: true }));
+
+// app.get("/", (req, res) => {
+// 	res.sendFile("index.html", { root: __dirname });
+// });
+
+/* SOCKETS */
+// const chat = [];
+
+// io.on("connect", (socket) => {
+// 	let nombre;
+// 	socket.on("msg", (data) => {
+// 		nombre = data;
+// 	});
+
+// 	socket.on("msgChat", (data) => {
+// 		chat.push({ ...data, nombre });
+
+//     io.sockets.emit("chat", chat);
+// 	});
+// });
