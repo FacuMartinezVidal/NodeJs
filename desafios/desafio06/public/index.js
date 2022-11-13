@@ -2,13 +2,20 @@ const socket = io();
 
 socket.on('connect', () => {
   console.log('quede conectado!');
-  //socket.emit("msg", "hola server!");
+  socket.emit('msg', 'hola server!');
 });
 
 socket.on('msg', (data) => {
   console.log(data);
 });
 
+socket.on('productos', (productos) => {
+  let th = '';
+  productos.forEach((item) => {
+    th += `<th>${item.id}</th> <th>${item.title}</th> <th>${item.price}</th> <th><img class="product-img" scr=${item.url}/></th>`;
+  });
+  document.getElementById('padre').innerHTML = th;
+});
 socket.on('msg-list', (data) => {
   console.log('msg-list', data);
   let html = '';
