@@ -2,49 +2,12 @@ const socket = io();
 
 socket.on('connect', () => {
   console.log('quede conectado!');
-  socket.emit('msg', 'hola server!');
 });
 
-socket.on('msg', (data) => {
-  console.log(data);
+socket.on('allProducts', (productos) => {
+  console.log(productos[0]);
+  let padre = document.getElementById('padre');
+  html1.innerHTML = `<thead> <tr> <th class="table-primary" scope="col">#</th> <th class="table-primary" scope="col">Nombre</th> <th class="table-primary" scope="col">Precio</th> <th class="table-primary" scope="col">Foto</th></tr> </thead>`;
+  productos.forEach((item) => {});
+  padre.append(html1);
 });
-
-socket.on('productos', (productos) => {
-  let th = '';
-  productos.forEach((item) => {
-    th += `<th>${item.id}</th> <th>${item.title}</th> <th>${item.price}</th> <th><img class="product-img" scr=${item.url}/></th>`;
-  });
-  document.getElementById('padre').innerHTML = th;
-});
-socket.on('msg-list', (data) => {
-  console.log('msg-list', data);
-  let html = '';
-  data.forEach((obj) => {
-    html += `
-    <div>
-      (${obj.socketid}) ${obj.email} dijo: ${obj.mensaje}
-    </div>
-    `;
-  });
-  document.getElementById('div-list-msgs').innerHTML = html;
-});
-
-//CUANDO SE PUBLICA UN PRODUCTO NUEVO EL SERVER ME REENVIA EL ARRAY CON TODOS LOS PRODUCTOS
-/* socket.on("msg-list-productos", (data) => {
-  console.log("msg-list", data);
-  let html = "";
-  data.forEach((obj) => {
-    html += `
-    <div>
-      (${obj.socketid}) ${obj.email} dijo: ${obj.mensaje}
-    </div>
-    `;
-  });
-  document.getElementById("div-list-productos").innerHTML = html;
-}); */
-
-function enviarMsg() {
-  const msgParaEnvio = document.getElementById('input-msg').value;
-  const email = document.getElementById('input-email').value;
-  socket.emit('msg', { email: email, mensaje: msgParaEnvio });
-}

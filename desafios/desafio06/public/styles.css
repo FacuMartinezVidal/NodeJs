@@ -10,3 +10,9 @@
 h1 {
   font-family: 'Lucida Console', 'Courier New', monospace;
 }
+
+.main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
