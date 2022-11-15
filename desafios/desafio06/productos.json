@@ -1,1 +1,27 @@
-[{"title":"Camiseta","price":"$30.000","url":"https://latinafy.com/images/thumbnails/590/590/detailed/32/1046369468.jpg","id":1},{"title":"Short","price":"$10.000","url":"https://cdn.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/s/h/short-de-argentina-adidas-oficial-negro--100020hb9216001-1.jpg","id":2},{"title":"Botines","price":"$80.000","url":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/156/867/products/diseno-sin-titulo-2022-01-31t170709-4951-a53facf75db9afbf7616436596710829-640-0.png","id":3},{"title":"Medias","price":"$4.000","url":"https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/i9st7vw9ol16mfb0dp0sf8hy2p25/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5","id":4},{"title":"Pelota","price":"$5.000","url":"https://cdn.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/p/e/pelota-qatar-2022-adidas-al-rihla-league-box-replica-numero-5-blanca-100040h57782001-1.jpg","id":5}]
+[
+  { "title": "Camiseta", "price": "$30.000", "url": "https://latinafy.com/images/thumbnails/590/590/detailed/32/1046369468.jpg", "id": 1 },
+  {
+    "title": "Short",
+    "price": "$10.000",
+    "url": "https://cdn.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/s/h/short-de-argentina-adidas-oficial-negro--100020hb9216001-1.jpg",
+    "id": 2
+  },
+  {
+    "title": "Botines",
+    "price": "$80.000",
+    "url": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/156/867/products/diseno-sin-titulo-2022-01-31t170709-4951-a53facf75db9afbf7616436596710829-640-0.png",
+    "id": 3
+  },
+  {
+    "title": "Medias",
+    "price": "$4.000",
+    "url": "https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/i9st7vw9ol16mfb0dp0sf8hy2p25/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5",
+    "id": 4
+  },
+  {
+    "title": "Pelota",
+    "price": "$5.000",
+    "url": "https://cdn.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/p/e/pelota-qatar-2022-adidas-al-rihla-league-box-replica-numero-5-blanca-100040h57782001-1.jpg",
+    "id": 5
+  }
+]

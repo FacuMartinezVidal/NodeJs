@@ -1,5 +1,5 @@
 const socket = io();
-socket.on('modProducts', (productos) => {
+socket.on('Products', (productos) => {
   let table = document.getElementById('padre');
   let html = `            <tr>
   <th>#</th>
@@ -27,8 +27,8 @@ socket.on('modProducts', (productos) => {
 });
 
 function enviarForm() {
-  const name = document.getElementById('name').value;
   const title = document.getElementById('title').value;
-  const url = document.getElementById('url');
-  socket.emit('product', { name: name, title: title, url: url });
+  const price = document.getElementById('price').value;
+  const url = document.getElementById('url').value;
+  socket.emit('product', { title: title, price: price, url: url });
 }

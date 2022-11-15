@@ -19,8 +19,9 @@ app.get('/', (req, res) => {
 io.on('connection', async (socket) => {
   console.log('se conecto un usuario');
   const productos = await contenedor.getAll();
-  io.sockets.emit('modProducts', productos);
+  io.sockets.emit('Products', productos);
   socket.on('product', async (product) => {
-    console.log(product);
+    contenedor.save(product);
+    io.sockets.emit('Products', productos);
   });
 });
