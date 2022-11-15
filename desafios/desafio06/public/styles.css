@@ -11,8 +11,50 @@ h1 {
   font-family: 'Lucida Console', 'Courier New', monospace;
 }
 
-.main{
+.main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.casilla {
+  border: 1px solid black;
+  width: 300px;
+}
+.sala-chat {
+  background-color: rgb(223, 227, 228);
+  width: 500px;
+  margin-left: 50px;
+}
+.chat {
+  margin-top: 30px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.chat2 {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+h2 {
+  margin-left: 50px;
+  color: blue;
+}
+.button {
+  background-color: blue;
+  border-radius: 2px;
+  color: aliceblue;
+  width: 60px;
+}
+.mensajes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }

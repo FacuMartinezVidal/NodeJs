@@ -15,13 +15,20 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
-
+const msgList = [];
 io.on('connection', async (socket) => {
   console.log('se conecto un usuario');
+  //se cargan los productos prexistentes
   const productos = await contenedor.getAll();
   io.sockets.emit('Products', productos);
+  //se actualizan los datos despues de subir un producto
   socket.on('product', async (product) => {
     contenedor.save(product);
     io.sockets.emit('Products', productos);
   });
+  socket.on('info-msg', (msg) => {
+    msgList.push(msg);
+    console.log(msgList);
+  });
+  io.sockets.emit('historial', msgList);
 });

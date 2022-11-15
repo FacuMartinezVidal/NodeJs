@@ -194,6 +194,20 @@
           <tbody id="padre"></tbody>
         </table>
       </section>
+      <section class="sala-chat">
+        <br />
+        <h2>Centro de Mensajes</h2>
+        <form onsubmit="return enviarMsg();return false">
+          <div class="chat">
+            <input class="casilla" id="email" placeholder="Ingrese su email..." />
+            <div class="mensajes" id="chat"></div>
+          </div>
+          <div class="chat2">
+            <input class="casilla" id="msg" placeholder="Ingrese un mensaje..." />
+            <input class="button" type="submit" value="Enviar" />
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
