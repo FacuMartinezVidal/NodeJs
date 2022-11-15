@@ -3,6 +3,8 @@ const app = express();
 const port = process.env.PORT || 8080;
 const Contenedor = require('./desafio02');
 const contenedor = new Contenedor();
+const Chat = require('./chat');
+const chat = new Chat();
 const httpServer = require('http').createServer(app);
 const io = require('socket.io')(httpServer);
 
@@ -26,9 +28,9 @@ io.on('connection', async (socket) => {
     contenedor.save(product);
     io.sockets.emit('Products', productos);
   });
-  socket.on('info-msg', (msg) => {
-    msgList.push(msg);
-    console.log(msgList);
+  socket.on('info-msg', async (msg) => {
+    chat.save(msg);
   });
-  io.sockets.emit('historial', msgList);
+  const chatL = await chat.getAll();
+  io.sockets.emit('historial', chatL);
 });

@@ -26,11 +26,10 @@ socket.on('Products', (productos) => {
   table.innerHTML = html;
 });
 
-socket.on('historial', (msgList) => {
+socket.on('historial', (chatL) => {
   let padre = document.getElementById('chat');
-  console.log(msgList);
   let html = ` `;
-  msgList.forEach((item) => {
+  chatL.forEach((item) => {
     html += `<p> ${item.email} [${item.fecha}] : ${item.msg}</p>`;
   });
   padre.innerHTML = html;
