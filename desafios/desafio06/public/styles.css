@@ -53,8 +53,3 @@ h2 {
   color: aliceblue;
   width: 60px;
 }
-.mensajes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
