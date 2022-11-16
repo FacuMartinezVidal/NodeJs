@@ -40,6 +40,7 @@ function enviarForm() {
   const price = document.getElementById('price').value;
   const url = document.getElementById('url').value;
   socket.emit('product', { title: title, price: price, url: url });
+  return false;
 }
 function enviarMsg() {
   const email = document.getElementById('email').value;
@@ -48,4 +49,5 @@ function enviarMsg() {
   const fecha = new Date(fechaActual);
   const fechaFormat = fecha.toLocaleString();
   socket.emit('info-msg', { email: email, msg: msg, fecha: fechaFormat });
+  return false;
 }

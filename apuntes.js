@@ -519,3 +519,14 @@
 //     io.sockets.emit("chat", chat);
 // 	});
 // });
+
+//transpilar--> convertir sintaxis avanzado de javascript, en este caso, y transformar en sintaxis base o vainilla.
+//compilador --> es un programa que se encarga de interpretar codigo en lenguajes no compilados y pasarlo a lenguaje maquina para que la computadora lo pueda ejecutar
+//Babel --> es un transpilador ubicado en una libreria que transpila un codigo de javascript con sintaxis avanzada
+//Babel --> para utilizarlo debemos instalar tres dependencia npm install @babel/core @babel/cli @babel/preset-env
+//Babel --> para que el watcher este listo agregamos el siguiente script "build": "babel ./origen.js -o ./destino.js -w"
+//Typescript --> ./node_modules/.bin/tsc --init son las configuraciones que tiene typescript y nos ayuda a configurarlo, es un archivo tsconfig.json
+//tsconfig.json--> module --> para configurar la importacion de cosas
+//tsconfig.json--> target --> el nivel de lenguaje de salida  (ES5)
+//tsconfig.json--> rootDrir --> donde va estar el codigo
+//tsconfig.json--> outDir --> donde va a ser el destino con todo el codigo ya transpilado

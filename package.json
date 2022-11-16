@@ -4,7 +4,8 @@
   "description": "",
   "main": "apuntes.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./origen.js -o ./destino.js -w"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,12 @@
   },
   "homepage": "https://github.com/FacuMartinezVidal/NodeJs#readme",
   "dependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
     "express": "^4.18.2",
     "prettier": "^2.7.1",
-    "socket.io": "^4.5.`"
+    "socket.io": "^4.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
