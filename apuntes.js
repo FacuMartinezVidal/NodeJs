@@ -490,7 +490,7 @@
 // const app = express();
 // const port = process.env.PORT || 8080;
 
-// //IMPLEMENTACION
+//IMPLEMENTACION
 // const httpServer = require("http").createServer(app);
 // const io = require("socket.io")(httpServer);
 
@@ -530,3 +530,17 @@
 //tsconfig.json--> target --> el nivel de lenguaje de salida  (ES5)
 //tsconfig.json--> rootDrir --> donde va estar el codigo
 //tsconfig.json--> outDir --> donde va a ser el destino con todo el codigo ya transpilado
+
+//WebPack --> Module Bundler o empaquetador de modulos, que genera un solo archivo (archivo unico) con todos los modulos que necesita la aplicacion para funcionar
+//Webpack --> permite encapsular todos los archivos JS en un unico archivo
+//Wepack --> para instalarlo: npm install webpack webpack-cli y dentro de los scripts crear el siguiente: "build": "webpack ./a1.js ./a2.js ./a3.js" y "dev": "webpack ./a1.js ./a2.js ./a3.js -w --mode=development"
+
+//PRIMERA ENTREGA
+// ctrl + l
+// ctrl enter
+// ctrl d
+// ctrl f2
+// end of line home of line
+// alt+mover la fleche
+// ctrl k
+// alt click
