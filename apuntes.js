@@ -544,3 +544,13 @@
 // alt+mover la fleche
 // ctrl k
 // alt click
+
+
+//base de datos --> es un repositorio persistente que nos permite almacenar gran numero de informacion de una forma organizada para su futura consulta, realizacion de busquedas, nuevo ingreso de datos y muchas otras operaciones.
+
+//servidor --> es un contenedor que puede alojar un gran numero de bases de datos y ofrece los servicios para conectarlas a los clientes.
+
+//base de datos --> mediante los clientes podemos interactuar con las bases de datos y estos pueden estar implementados en modo consola, aplicacion grafica, express, etc
+
+
+//SQL -> Structured Query Language, es un tipo de lenguaje vinculado con la gestion de base de datos de caracter relacional y poder realizar operaciones CRUD (Create Read Update Delete)
